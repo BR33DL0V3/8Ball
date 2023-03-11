@@ -1,0 +1,104 @@
+body {
+  background-color: black;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.eight-ball {
+  width: 200px;
+  height: 200px;
+  background-color: white;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+}
+
+.eight-ball::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120%;
+  height: 120%;
+  transform: translate(-50%, -50%);
+  background-color: black;
+  border-radius: 50%;
+}
+
+.eight-ball::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  height: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #e0e0e0;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.eight-ball p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  text-shadow: 1px 1px black;
+  z-index: 2;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+label {
+  margin-bottom: 10px;
+  color: white;
+  text-shadow: 1px 1px black;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid gray;
+}
+
+button {
+  background-color: blue;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  text-shadow: 1px 1px black;
+}
+
+button:hover {
+  background-color: navy;
+}
+
+.response {
+  margin-top: 20px;
+  text-align: center;
+  color: white;
+  text-shadow: 1px 1px black;
+}
+
